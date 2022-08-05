@@ -1,0 +1,33 @@
+<mvc:View controllerName="sap.req.compra.controller.Cockpit" 
+          xmlns:core="sap.ui.core" 
+		  xmlns:mvc="sap.ui.core.mvc"
+		  displayBlock="true" 
+		  xmlns="sap.m" 
+		  xmlns:f="sap.ui.layout.form" 
+		  xmlns:l="sap.ui.layout" 
+		  class="sapUiSizeCompact">
+	
+	<f:SimpleForm editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="12" labelSpanS="12"
+				  adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="3" columnsL="3" columnsM="3"
+				  singleContainerFullSize="false" title="Criar Requisição de Compra">
+		<f:content>
+			 <!-- Primeira coluna - Início -->
+			<core:Title text="" level="H6"/>
+			<Label text="Grupo merc." required="true" />
+			<Input id="extwg" tooltip="Grupo de mercadorias" type="Text" value="{ path: 'Cabecalho>/extwg' }" showValueHelp="true" valueHelpRequest="handleValueHelpExtwg" />
+			<Label text="Fornecedor" required="true" />
+			<Input id="lifnr" tooltip="Fornecedor" type="Text" value="{ path: 'Cabecalho>/lifnr' }" showValueHelp="true" valueHelpRequest="handleValueHelpFornecedores" />
+			
+			 <!-- Primeira coluna - Fim -->
+			
+			 <!-- Segunda coluna - Início -->
+			<core:Title text="" level="H6"/>
+			<Label text="Centro" required="true" />
+			<Input id="werks" tooltip="Centro" type="Text" value="{ path: 'Cabecalho>/werks' }" showValueHelp="true" valueHelpRequest="handleValueHelpCentro" />
+			<Label text="Org.compras" required="true" />
+			<Input id="ekorg" tooltip="Organização de compras" type="Text" value="{ path: 'Cabecalho>/ekorg' }" showValueHelp="true" valueHelpRequest="handleValueHelpOrgCompra" />
+			 <!-- Segunda coluna - Fim -->
+		</f:content>
+	</f:SimpleForm>
+	
+</mvc:View>

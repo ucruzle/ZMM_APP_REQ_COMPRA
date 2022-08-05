@@ -1,0 +1,19 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<TableSelectDialog noDataText="Nenhum Elemento PEP foi encontrado" title="Selecionar Elementos PEP" search="handleValueHelpSearchElementoPep"
+		liveChange="handleValueHelpSearchElementoPep" confirm="handleValueHelpCloseElementoPep" multiSelect="false" growingThreshold="500" items="{ElementosPep}">
+		<ColumnListItem>
+			<cells>
+				<Text text="{idElementoPep}"/>
+				<Text text="{descricaoElementoPep}"/>
+			</cells>
+		</ColumnListItem>
+		<columns>
+			<Column width="12em">
+				<header></header>
+			</Column>
+			<Column width="12em">
+				<header></header>
+			</Column>
+		</columns>
+	</TableSelectDialog>
+</core:FragmentDefinition>

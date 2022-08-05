@@ -1,0 +1,19 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<TableSelectDialog noDataText="Nenhum Centro foi encontrado" title="Selecionar Centros" search="handleValueHelpSearchCentro"
+		liveChange="handleValueHelpSearchCentro" confirm="handleValueHelpCloseCentro" multiSelect="false" growingThreshold="500" items="{Centros}">
+		<ColumnListItem>
+			<cells>
+				<Text text="{idCentro}"/>
+				<Text text="{nomeCentro}"/>
+			</cells>
+		</ColumnListItem>
+		<columns>
+			<Column width="12em">
+				<header></header>
+			</Column>
+			<Column width="12em">
+				<header></header>
+			</Column>
+		</columns>
+	</TableSelectDialog>
+</core:FragmentDefinition>

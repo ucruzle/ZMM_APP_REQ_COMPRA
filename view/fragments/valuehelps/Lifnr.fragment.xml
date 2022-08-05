@@ -1,0 +1,19 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<TableSelectDialog noDataText="Nenhum Fornecedor foi encontrado" title="Selecionar Fornecedores" search="handleValueHelpSearchFornecedores"
+		liveChange="handleValueHelpSearchFornecedores" confirm="handleValueHelpCloseFornecedores" multiSelect="false" growingThreshold="500" items="{Fornecedores}">
+		<ColumnListItem>
+			<cells>
+				<Text text="{idFornecedor}"/>
+				<Text text="{nomeFornecedor}"/>
+			</cells>
+		</ColumnListItem>
+		<columns>
+			<Column width="12em">
+				<header></header>
+			</Column>
+			<Column width="12em">
+				<header></header>
+			</Column>
+		</columns>
+	</TableSelectDialog>
+</core:FragmentDefinition>

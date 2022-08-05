@@ -1,0 +1,24 @@
+<mvc:View xmlns:core="sap.ui.core"
+          xmlns:mvc="sap.ui.core.mvc" 
+	      xmlns="sap.m" 
+		  xmlns:f="sap.ui.layout.form"
+		  xmlns:l="sap.ui.layout"
+		  displayBlock="true"
+		  class="sapUiSizeCompact"
+		  controllerName="sap.req.compra.controller.Cockpit">
+	
+	<Page title="" showHeader="false" showNavButton="false">
+		<content>
+			<mvc:XMLView viewName="sap.req.compra.view.CabecalhoCockpit"/>
+			<mvc:XMLView viewName="sap.req.compra.view.ItensCockpit"/>
+		</content>
+		<footer>
+			<Toolbar>
+				<ToolbarSpacer/>
+				<Button type="Emphasized" text="Salvar" press="onSave">
+					<layoutData><OverflowToolbarLayoutData priority="NeverOverflow"/></layoutData>
+				</Button>
+			</Toolbar>
+		</footer>
+	</Page>
+</mvc:View>

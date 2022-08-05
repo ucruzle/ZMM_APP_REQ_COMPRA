@@ -1,0 +1,19 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<TableSelectDialog noDataText="Nenhuma Organização de compra foi encontrado" title="Selecionar Organizações de compras" search="handleValueHelpSearchOrgCompra"
+		liveChange="handleValueHelpSearchOrgCompra" confirm="handleValueHelpCloseOrgCompra" multiSelect="false" growingThreshold="500" items="{OrgCompras}">
+		<ColumnListItem>
+			<cells>
+				<Text text="{idOrgCompra}"/>
+				<Text text="{descricaoOrgCompra}"/>
+			</cells>
+		</ColumnListItem>
+		<columns>
+			<Column width="12em">
+				<header></header>
+			</Column>
+			<Column width="12em">
+				<header></header>
+			</Column>
+		</columns>
+	</TableSelectDialog>
+</core:FragmentDefinition>

@@ -1,0 +1,19 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<TableSelectDialog noDataText="Nenhum Material foi encontrado" title="Selecionar Materiais" search="handleValueHelpSearchMaterial"
+		liveChange="handleValueHelpSearchMaterial" confirm="handleValueHelpCloseMaterial" multiSelect="false" growingThreshold="500" items="{Materiais}">
+		<ColumnListItem>
+			<cells>
+				<Text text="{idMaterial}"/>
+				<Text text="{descricaoMaterial}"/>
+			</cells>
+		</ColumnListItem>
+		<columns>
+			<Column width="12em">
+				<header></header>
+			</Column>
+			<Column width="12em">
+				<header></header>
+			</Column>
+		</columns>
+	</TableSelectDialog>
+</core:FragmentDefinition>

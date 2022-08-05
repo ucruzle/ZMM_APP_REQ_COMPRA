@@ -1,0 +1,141 @@
+<mvc:View controllerName="sap.req.compra.controller.Cockpit" 
+		  xmlns="sap.ui.table"
+		  xmlns:mvc="sap.ui.core.mvc"
+		  xmlns:u="sap.ui.unified"
+		  xmlns:c="sap.ui.core"
+		  xmlns:m="sap.m"
+	      height="100%">
+	
+	<m:Page
+		showHeader="false"
+		enableScrolling="false"
+		class="sapUiContentPadding">
+		<m:content>
+			<Table
+				rows="{/Itens}"
+				selectionMode="Single"
+				visibleRowCount="8"
+				ariaLabelledBy="title">
+				<extension>
+					<m:OverflowToolbar>
+						<m:Title id="title" text=""/>
+						<m:ToolbarSpacer />
+						<m:Button icon="sap-icon://filter" press="onBuscaItensDaRequisicao" />
+					</m:OverflowToolbar>
+				</extension>
+				<columns>
+					
+					<!-- INI - Dados dos itens da RC -->
+					
+					<Column width="5rem" hAlign="Center">
+						<multiLabels>
+							<m:Label text="Item" tooltip="Item da requisição de compras" />
+						</multiLabels>
+						<template>
+							<m:Label text="{bnfpo}" 
+							         tooltip="Item da requisição de compras" />
+						</template>
+					</Column>
+					<Column width="4rem" hAlign="Center">
+						<multiLabels>
+							<m:Label text="Ctg" tooltip="Categoria de classificação contábil" />
+					    </multiLabels>
+						<template>
+							<m:Label text="{knttp}" 
+									 tooltip="Categoria de classificação contábil" />
+						</template>
+					</Column>
+					<Column width="10rem" hAlign="Center">
+						<multiLabels>
+							<m:Label text="Material" tooltip="Nº do Material" />
+						</multiLabels>
+						<template>
+							<m:Input value="{matnr}" 
+									 tooltip="Nº do Material"
+									 showValueHelp="true"
+									 valueHelpRequest="handleValueHelpMaterial" />
+						</template>
+					</Column>
+					<Column width="20rem" hAlign="Center">
+						<multiLabels>
+							<m:Label text="Descrição" tooltip="Descrição do Material" />
+						</multiLabels>
+						<template>
+							<m:Label text="{maktx}" 
+							         tooltip="Descrição do Material" />
+						</template>
+					</Column>
+					<Column width="4rem" hAlign="Center">
+						<multiLabels>
+							<m:Label text="UM" tooltip="Unidade medida" />
+						</multiLabels>
+						<template>
+							<m:Label text="{meins}" 
+							         tooltip="Unidade medida" />
+						</template>
+					</Column>
+					<Column width="15rem" hAlign="Center">
+						<multiLabels>
+							<m:Label text="Elemento PEP" tooltip="Elemento PEP" />
+						</multiLabels>
+						<template>
+							<m:Input value="{pspnr}" 
+							         tooltip="Elemento PEP"
+									 showValueHelp="true"
+									 valueHelpRequest="handleValueHelpElementoPep" />
+						</template>
+					</Column>
+					<Column width="8rem" hAlign="Center">
+						<multiLabels>
+							<m:Label text="Quantidade" tooltip="Quantidade solicitada" />
+						</multiLabels>
+						<template>
+							<m:Input value="{qtdReq}" 
+							         tooltip="Quantidade solicitada" />
+						</template>
+					</Column>
+					<Column width="8rem" hAlign="Center">
+						<multiLabels>
+							<m:Label text="Preço" tooltip="Preço avaliação" />
+						</multiLabels>
+						<template>
+							<m:Label text="{precoReq}" 
+							         tooltip="Preço avaliação" />
+						</template>
+					</Column>
+					<Column width="8rem" hAlign="Center">
+						<multiLabels>
+							<m:Label text="Val Total" tooltip="Val.total durante lib." />
+						</multiLabels>
+						<template>
+							<m:Label text="{vlrTotal}" 
+							         tooltip="Val.total durante lib." />
+						</template>
+					</Column>
+					<Column width="8rem" hAlign="Center">
+						<multiLabels>
+							<m:Label text="Data Remessa" tooltip="Data de remessa" />
+						</multiLabels>
+						<template>
+							<m:Label text="{dataRemessa}" 
+							         tooltip="Data de remessa" />
+						</template>
+					</Column>
+					<Column width="8rem" hAlign="Center">
+						<multiLabels>
+							<m:Label text="Reg INFO" tooltip="Nº registro info para compras" />
+						</multiLabels>
+						<template>
+							<m:Label text="{infnr}" 
+							         tooltip="Nº registro info para compras" />
+						</template>
+					</Column>
+					
+					<!-- FIM - Dados dos itens da RC -->
+					
+				</columns>
+			</Table>
+		</m:content>
+	</m:Page>	
+	
+</mvc:View>
