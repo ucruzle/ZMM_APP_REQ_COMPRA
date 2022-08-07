@@ -721,7 +721,39 @@ sap.ui.define([
 
 		handleValueHelpCloseElementoPep: function(oEvent) { 
 
-		}
+		},
+
+		handleValueHelpRegInfo: function(oEvent) {
+			this._eventSource = oEvent.getSource().getId();
+
+			this.inputId = oEvent.getSource().getId();
+			// create value help dialog
+			if (!this._valueHelpDialogMaterial) {
+				this._valueHelpDialogMaterial = sap.ui.xmlfragment(
+					"sap.req.compra.view.fragments.valuehelps.Infnr",
+					this
+				);
+				this.getView().addDependent(this._valueHelpDialogMaterial);
+			}
+
+			this._valueHelpDialogMaterial.open();
+		},
+
+		handleValueHelpSearchRegInfo: function(oEvent) { 
+
+		},
+
+		handleValueHelpCloseRegInfo: function(oEvent) { 
+
+		},
+
+		onElilminarItensDaRequisicao: function (oEvent) {
+
+			utils.confirmDialog("Deseja eliminar os itens selecionados?", function () {
+				null;
+			});
+
+		},
 
 		// _buscaDadosDaUltimaOrdem: function(frota) { //busca dados da última ordem
 		// 	var that = this;

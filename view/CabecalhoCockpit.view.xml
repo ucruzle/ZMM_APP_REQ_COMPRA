@@ -9,7 +9,7 @@
 	
 	<f:SimpleForm editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="12" labelSpanS="12"
 				  adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="3" columnsL="3" columnsM="3"
-				  singleContainerFullSize="false" title="Criar Requisição de Compra">
+				  singleContainerFullSize="false" title="Criar Pedido de Compra">
 		<f:content>
 			 <!-- Primeira coluna - Início -->
 			<core:Title text="" level="H6"/>
@@ -27,6 +27,14 @@
 			<Label text="Org.compras" required="true" />
 			<Input id="ekorg" tooltip="Organização de compras" type="Text" value="{ path: 'Cabecalho>/ekorg' }" showValueHelp="true" valueHelpRequest="handleValueHelpOrgCompra" />
 			 <!-- Segunda coluna - Fim -->
+
+			 <!-- Terceira coluna - Início -->
+			<core:Title text="" level="H6"/>
+			<Label text="Reg INFO" />
+			<Input id="regInfo" tooltip="Nº registro info para compras" type="Text" value="{ path: 'Cabecalho>/regInfo' }" showValueHelp="true" valueHelpRequest="handleValueHelpRegInfo" />
+			<Label text="Total" />
+			<Input id="valorTotal" tooltip="Somatória de preço de todos os itens" type="Text" value="{ path: 'Cabecalho>/valorTotal' }" enabled="false" />
+			 <!-- Terceira coluna - Fim -->
 		</f:content>
 	</f:SimpleForm>
 	

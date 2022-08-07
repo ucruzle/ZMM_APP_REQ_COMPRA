@@ -13,14 +13,15 @@
 		<m:content>
 			<Table
 				rows="{/Itens}"
-				selectionMode="Single"
+				selectionMode="MultiToggle"
 				visibleRowCount="8"
 				ariaLabelledBy="title">
 				<extension>
 					<m:OverflowToolbar>
-						<m:Title id="title" text=""/>
+						<m:Button icon="sap-icon://accept" press="onChecarItensDaRequisicao" tooltip="Checar dados para processamento do pedido de compras" />
 						<m:ToolbarSpacer />
-						<m:Button icon="sap-icon://filter" press="onBuscaItensDaRequisicao" />
+						<m:Button icon="sap-icon://filter" press="onBuscaItensDaRequisicao" tooltip="Consultar Itens do pedido de compras" />
+						<m:Button icon="sap-icon://delete" press="onElilminarItensDaRequisicao" tooltip="Eliminar Itens do pedido de compras" />
 					</m:OverflowToolbar>
 				</extension>
 				<columns>
@@ -36,7 +37,7 @@
 							         tooltip="Item da requisição de compras" />
 						</template>
 					</Column>
-					<Column width="4rem" hAlign="Center">
+					<Column width="4rem" hAlign="Center" visible="false">
 						<multiLabels>
 							<m:Label text="Ctg" tooltip="Categoria de classificação contábil" />
 					    </multiLabels>
@@ -114,14 +115,14 @@
 					</Column>
 					<Column width="8rem" hAlign="Center">
 						<multiLabels>
-							<m:Label text="Data Remessa" tooltip="Data de remessa" />
+							<m:Label text="Data de Entrega" tooltip="Data de Entrega" />
 						</multiLabels>
 						<template>
-							<m:Label text="{dataRemessa}" 
-							         tooltip="Data de remessa" />
+							<m:Label text="{dataEntrega}" 
+							         tooltip="Data de Entrega" />
 						</template>
 					</Column>
-					<Column width="8rem" hAlign="Center">
+					<Column width="8rem" hAlign="Center" visible="false">
 						<multiLabels>
 							<m:Label text="Reg INFO" tooltip="Nº registro info para compras" />
 						</multiLabels>

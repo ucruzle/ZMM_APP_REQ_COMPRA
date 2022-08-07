@@ -1,0 +1,19 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<TableSelectDialog noDataText="Nenhum Registro INFO foi encontrado" title="Selecionar Registros INFO" search="handleValueHelpSearchRegInfo"
+		liveChange="handleValueHelpSearchRegInfo" confirm="handleValueHelpCloseRegInfo" multiSelect="false" growingThreshold="500" items="{RegInfo}">
+		<ColumnListItem>
+			<cells>
+				<Text text="{idRegInfo}"/>
+				<Text text="{descricaoRegInfo}"/>
+			</cells>
+		</ColumnListItem>
+		<columns>
+			<Column width="12em">
+				<header></header>
+			</Column>
+			<Column width="12em">
+				<header></header>
+			</Column>
+		</columns>
+	</TableSelectDialog>
+</core:FragmentDefinition>
