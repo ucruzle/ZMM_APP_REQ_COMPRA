@@ -18,10 +18,10 @@
 				ariaLabelledBy="title">
 				<extension>
 					<m:OverflowToolbar>
-						<m:Button icon="sap-icon://accept" press="onChecarItensDaRequisicao" tooltip="Checar dados para processamento do pedido de compras" />
+						<m:Button icon="sap-icon://delete" press="onElilminarItensDaRequisicao" tooltip="Eliminar Itens do pedido de compras" />
+						<m:Button icon="sap-icon://activity-2" press="onChecarItensDaRequisicao" tooltip="Checar dados para processamento do pedido de compras" />
 						<m:ToolbarSpacer />
 						<m:Button icon="sap-icon://filter" press="onBuscaItensDaRequisicao" tooltip="Consultar Itens do pedido de compras" />
-						<m:Button icon="sap-icon://delete" press="onElilminarItensDaRequisicao" tooltip="Eliminar Itens do pedido de compras" />
 					</m:OverflowToolbar>
 				</extension>
 				<columns>

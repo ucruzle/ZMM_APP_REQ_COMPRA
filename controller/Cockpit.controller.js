@@ -43,6 +43,8 @@ sap.ui.define([
 
 		onBuscaItensDaRequisicao: function() {
 
+			debugger;
+
 			// create JSON model instance
 			var oModel = new JSONModel();
 
@@ -754,6 +756,10 @@ sap.ui.define([
 			});
 
 		},
+
+		onChecarItensDaRequisicao: function (oEvent) {
+
+		}
 
 		// _buscaDadosDaUltimaOrdem: function(frota) { //busca dados da última ordem
 		// 	var that = this;
